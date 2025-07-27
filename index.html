@@ -124,7 +124,7 @@
       touch-action: pan-y;
     } 
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -168,7 +168,7 @@
     font-size: 14px;
     width: 95%;
   }
-}
+} */
 
 
 
@@ -330,7 +330,6 @@
           <h3>${recipe.title}</h3>
           <p><strong>Ingredients:</strong><br>${recipe.ingredients}</p>
           <p><strong>Instructions:</strong><br> ${recipe.instructions}</p>
-           <button class="read-more-btn" onclick="toggleRecipe(this)">Read More</button>
           <button class="delete-btn" onclick="deleteRecipe(${recipe.id})">Delete</button>
         `;
         recipeContainer.appendChild(card);
@@ -338,13 +337,6 @@
   });
 
     }
-
-    function toggleRecipe(button) {
-  const card = button.closest('.recipe-card');
-  card.classList.toggle('expanded');
-  button.textContent = card.classList.contains('expanded') ? 'Show Less' : 'Read More';
-}
-
 
     function filterRecipes() {
       const query = document.getElementById('searchInput').value.toLowerCase();
