@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Recipe Book App</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -124,51 +125,76 @@
       touch-action: pan-y;
     } 
 
-    /* @media (max-width: 768px) {
+
+    /* Base Styles (already defined) */
+
+/* Extra small devices (phones, < 400px) */
+@media (max-width: 400px) {
+  body {
+    padding: 8px;
+  }
+
+  .recipe-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* Small devices (phones & narrow tablets, 401px - 767px) */
+@media (max-width: 767px) {
   .container {
     flex-direction: column;
     align-items: center;
   }
 
   .recipe-card {
-    width: 90%;
+    width: 100%;
+    margin: 10px 0;
   }
 
   #searchInput {
     width: 90%;
-  }
-
-  .modal-content {
-    width: 95%;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 480px) {.container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    width: 100vw;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }.recipe-card {
-    min-width: 85vw;
-    max-width: 90vw;
-    margin-right: 12px;
-    width: auto;
+/* Medium devices (tablets, 768px - 1024px) */
+@media (max-width: 1024px) {
+  .recipe-card {
+    width: 45%;
   }
 
-  h1 {
-    font-size: 18px;
-  }.add-recipe-btn {
-    width: 95%;
-    font-size: 14px;
+  .container {
+    justify-content: space-around;
+  }
+}
+
+/* Large screens (desktops and wide tablets, > 1025px) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  #searchInput, input, textarea {
-    font-size: 14px;
-    width: 95%;
+  .recipe-card {
+    width: 250px;
   }
-} */
+}
+
 
 
 
@@ -235,6 +261,43 @@
   margin-top: 8px;
 }
 
+   /* For screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .recipe-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+  #searchInput {
+    width: 90%;
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  header {
+    margin-bottom: 20px;
+  }
+  .search-bar {
+    margin-bottom: 10px;
+  }
+  #searchInput {
+    padding: 8px;
+  }
+  .recipe-card {
+    padding: 10px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+}
 
 
   </style>
